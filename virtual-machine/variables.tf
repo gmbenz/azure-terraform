@@ -1,7 +1,8 @@
 variable "subscription_name" {
-  description = "Azure Subscription 1"
+  description = "Name of the Azure subscription"
   type        = string
-}
+  default = "Azure Subscription 1"
+  }
 variable "resource_group_name" {
   description = "Name of the resource group"
   type        = string
