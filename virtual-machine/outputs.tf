@@ -17,3 +17,13 @@ output "subnet_id" {
   description = "ID of the subnet"
   value       = azurerm_subnet.subnet.id
 }
+
+output "bastion_public_ip" {
+  description = "Public IP address of Azure Bastion"
+  value       = azurerm_public_ip.bastion_pip.ip_address
+}
+
+output "bastion_dns_name" {
+  description = "DNS name of Azure Bastion"
+  value       = azurerm_bastion_host.bastion.dns_name
+}

@@ -1,7 +1,7 @@
-variable "subscription_name" {
-  description = "Name of the Azure subscription"
+variable "subscription_id" {
+  description = "ID of the Azure subscription"
   type        = string
-  default = "Azure Subscription 1"
+  default = "0705d8dc-373b-44a1-a242-bc0e1364c253"
   }
 variable "resource_group_name" {
   description = "Name of the resource group"
@@ -16,22 +16,23 @@ variable "vm_name" {
 variable "vm_region" {
   description = "Azure region where resources will be created"
   type        = string
-  default     = "eastus2"
+  default     = "westus"
 }
-variable "vm_zone" {
-  description = "Availability zone for the virtual machine"
-  type        = string
-  default     = "1"
-}
+# Not supported in westus
+#variable "vm_zone" {
+#  description = "Availability zone for the virtual machine"
+#  type        = string
+#  default     = "1"
+#}
 variable "vm_image" {
   description = "The image to use for the virtual machine"
   type        = string
-  default     = "MicrosoftWindowsServer:WindowsServer:2019-Datacenter:latest"
+  default     = "MicrosoftWindowsServer:WindowsServer:2022-Datacenter:latest"
 }   
 variable "vm_size" {
   description = "Size of the virtual machine"
   type        = string
-  default     = "Standard_B1s"
+  default     = "Standard_E2s_v3"
 }
 variable "admin_username" {
   description = "Admin username for the virtual machine"

@@ -23,5 +23,5 @@ resource "azurerm_windows_virtual_machine" "vm" {
     version   = local.vm_image_parts[3]
   }
 
-  zone = var.vm_zone
+  #zone = var.vm_zone
 }
